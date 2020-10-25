@@ -1,5 +1,6 @@
 {
   "name": "whackamole-hack",
+  "homepage":"https://ferispeakscode.github.io/whackamole-hack/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
