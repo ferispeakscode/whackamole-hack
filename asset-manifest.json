@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/whackamole-hack/static/css/main.75df9f48.chunk.css",
+    "main.js": "/whackamole-hack/static/js/main.3bf471cf.chunk.js",
+    "main.js.map": "/whackamole-hack/static/js/main.3bf471cf.chunk.js.map",
+    "runtime-main.js": "/whackamole-hack/static/js/runtime-main.9b1b7d45.js",
+    "runtime-main.js.map": "/whackamole-hack/static/js/runtime-main.9b1b7d45.js.map",
+    "static/js/2.680e9bc6.chunk.js": "/whackamole-hack/static/js/2.680e9bc6.chunk.js",
+    "static/js/2.680e9bc6.chunk.js.map": "/whackamole-hack/static/js/2.680e9bc6.chunk.js.map",
+    "index.html": "/whackamole-hack/index.html",
+    "precache-manifest.d28fa9bc17c86f917ab1410bfc8441b8.js": "/whackamole-hack/precache-manifest.d28fa9bc17c86f917ab1410bfc8441b8.js",
+    "service-worker.js": "/whackamole-hack/service-worker.js",
+    "static/css/main.75df9f48.chunk.css.map": "/whackamole-hack/static/css/main.75df9f48.chunk.css.map",
+    "static/js/2.680e9bc6.chunk.js.LICENSE.txt": "/whackamole-hack/static/js/2.680e9bc6.chunk.js.LICENSE.txt",
+    "static/media/mintbean.png": "/whackamole-hack/static/media/mintbean.cf18b629.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b1b7d45.js",
+    "static/js/2.680e9bc6.chunk.js",
+    "static/css/main.75df9f48.chunk.css",
+    "static/js/main.3bf471cf.chunk.js"
+  ]
+}
