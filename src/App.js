@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './mintbean.png';
 import './styles/index.css';
-import Start from './components/StartComponent';
+import Landing from './components/LandingComponent';
 
 function App() {
   return (
     <div className="App">
-        <Start />
+        <Landing />
     </div>
   );
 }
