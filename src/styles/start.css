@@ -1,0 +1,8 @@
+.startButton{
+    font-size: 50px;
+    color: #3d392f;
+    background-color: #FCBA03;
+    /* border: #524c3c solid; */
+    border-radius: 60px;
+    padding: 30px;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-// import './styles/index.css';
+import '../styles/start.css';
 
 function Start() {
   return (
-    <div className="">
-        <button>Start Game</button>
+    <div>
+        <button className="startButton">Start Game</button>
     </div>
   );
 }
