@@ -30,6 +30,20 @@ class Field extends Component {
                     {this.renderSquare(13)}
                     {this.renderSquare(14)}
                 </div>
+                <div className="board-row">
+                    {this.renderSquare(15)}
+                    {this.renderSquare(16)}
+                    {this.renderSquare(17)}
+                    {this.renderSquare(18)}
+                    {this.renderSquare(19)}
+                </div>
+                <div className="board-row">
+                    {this.renderSquare(20)}
+                    {this.renderSquare(21)}
+                    {this.renderSquare(22)}
+                    {this.renderSquare(23)}
+                    {this.renderSquare(24)}
+                </div>
             </div>
         );
     }
