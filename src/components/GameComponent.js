@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Field from './FieldComponent';
+import Score from './ScoreComponent';
 
 class Game extends Component {
     
@@ -11,21 +12,8 @@ class Game extends Component {
         };
     }
 
-    runHiragana = (event) => {
-        console.log("runHiragana");
-    }
-
-    runKatakana = (event) => {
-        console.log("runKatakana");
-    }
-
-    setupGame = () => {
-    }
-
-    generateMoles() {
-    }
-
-    gameOver = () => {
+    renderScore() {
+        return <Score value={this.state.score} />;
     }
     
     render () {
@@ -40,6 +28,7 @@ class Game extends Component {
                     <button className="modes medium" onClick={this.runKatakana}>Play in Katakana</button>
                 </p>
 
+                {this.renderScore()}
                 <Field />
             </div>
         );
