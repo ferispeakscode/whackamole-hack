@@ -7,42 +7,62 @@ class Field extends Component {
     }
 
     render() {
+        const hiragana = ["あ", "い", "う", "え", "お", 
+                        　"か", "き", "く", "け", "こ", 
+                          "さ", "し", "す", "せ", "そ", 
+                        　"た", "ち", "つ", "て", "と", 
+                        　"な", "に", "ぬ", "ね", "の", 
+                        　"は", "ひ", "ふ", "へ", "ほ",
+                          "ま", "み", "む", "め", "も",
+                          "や", "ゆ", "よ", 
+                        　"ら", "り", "る", "れ", "ろ", 
+                        　"わ", "を", "ん" ];
+
+        const values = [];
+        for (let i = 0; i < 25; i++) {
+            let selection = Math.floor(Math.random() * 25);
+            console.log(selection);
+            values.push(hiragana[selection]);
+        }
+
+        console.log(values);
+
         return (
             <div>
                 <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
+                    {this.renderSquare(values[0])}
+                    {this.renderSquare(values[1])}
+                    {this.renderSquare(values[2])}
+                    {this.renderSquare(values[3])}
+                    {this.renderSquare(values[4])}
                 </div>
                 <div className="board-row">
-                    {this.renderSquare(5)}
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                    {this.renderSquare(9)}
+                    {this.renderSquare(values[5])}
+                    {this.renderSquare(values[6])}
+                    {this.renderSquare(values[7])}
+                    {this.renderSquare(values[8])}
+                    {this.renderSquare(values[9])}
                 </div>
                 <div className="board-row">
-                    {this.renderSquare(10)}
-                    {this.renderSquare(11)}
-                    {this.renderSquare(12)}
-                    {this.renderSquare(13)}
-                    {this.renderSquare(14)}
+                    {this.renderSquare(values[10])}
+                    {this.renderSquare(values[11])}
+                    {this.renderSquare(values[12])}
+                    {this.renderSquare(values[13])}
+                    {this.renderSquare(values[14])}
                 </div>
                 <div className="board-row">
-                    {this.renderSquare(15)}
-                    {this.renderSquare(16)}
-                    {this.renderSquare(17)}
-                    {this.renderSquare(18)}
-                    {this.renderSquare(19)}
+                    {this.renderSquare(values[15])}
+                    {this.renderSquare(values[16])}
+                    {this.renderSquare(values[17])}
+                    {this.renderSquare(values[18])}
+                    {this.renderSquare(values[19])}
                 </div>
                 <div className="board-row">
-                    {this.renderSquare(20)}
-                    {this.renderSquare(21)}
-                    {this.renderSquare(22)}
-                    {this.renderSquare(23)}
-                    {this.renderSquare(24)}
+                    {this.renderSquare(values[20])}
+                    {this.renderSquare(values[21])}
+                    {this.renderSquare(values[22])}
+                    {this.renderSquare(values[23])}
+                    {this.renderSquare(values[24])}
                 </div>
             </div>
         );
