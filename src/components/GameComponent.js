@@ -29,16 +29,16 @@ class Game extends Component {
     }
     
     render () {
-
         return(
             <div>
-                
                 <h1>Whack-a-"Mole"!</h1>
 
                 <p id="directions">Choose your mode of play!</p>
 
-                <button className="modes easy" onClick={this.runHiragana}>Play in Hiragana</button>
-                <button className="modes medium" onClick={this.runKatakana}>Play in Katakana</button>
+                <p>
+                    <button className="modes easy" onClick={this.runHiragana}>Play in Hiragana</button>
+                    <button className="modes medium" onClick={this.runKatakana}>Play in Katakana</button>
+                </p>
 
                 <Field />
             </div>
