@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Field from './FieldComponent';
 
 class Game extends Component {
     
@@ -39,6 +40,7 @@ class Game extends Component {
                 <button className="modes easy" onClick={this.runHiragana}>Play in Hiragana</button>
                 <button className="modes medium" onClick={this.runKatakana}>Play in Katakana</button>
 
+                <Field />
             </div>
         );
     }
