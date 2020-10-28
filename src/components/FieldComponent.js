@@ -7,6 +7,7 @@ class Field extends Component {
     }
 
     render() {
+        //Alphabet Bank
         const hiragana = ["あ", "い", "う", "え", "お", 
                         　"か", "き", "く", "け", "こ", 
                           "さ", "し", "す", "せ", "そ", 
@@ -18,6 +19,18 @@ class Field extends Component {
                         　"ら", "り", "る", "れ", "ろ", 
                         　"わ", "を", "ん" ];
 
+        const katakana = ["ア", "イ", "ウ", "エ", "オ", 
+                        　"カ", "キ", "ク", "ケ", "コ", 
+                          "サ", "シ", "ス", "セ", "ソ", 
+                        　"タ", "チ", "ツ", "テ", "ト", 
+                        　"ナ", "ニ", "ヌ", "ネ", "ノ", 
+                        　"ハ", "ヒ", "フ", "へ", "ホ",
+                          "マ", "ミ", "ム", "メ", "モ",
+                          "ヤ", "ユ", "ヨ", 
+                        　"ラ", "リ", "ル", "レ", "ロ", 
+                        　"ワ", "ヲ", "ン" ];                
+
+        //Generate random letters for field
         const values = [];
         for (let i = 0; i < 25; i++) {
             let selection = Math.floor(Math.random() * 25);
