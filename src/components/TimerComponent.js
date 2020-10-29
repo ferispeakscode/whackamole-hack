@@ -50,7 +50,6 @@ class Timer extends Component {
         //Check if at 0
         if (seconds == 0) {
             clearInterval(this.timer);
-            this.resetTimer();
         }
     }
 
