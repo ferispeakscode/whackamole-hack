@@ -13,7 +13,11 @@ class Game extends Component {
         };
     }
 
-    renderScore() {
+    updateScore = (value) => {
+        this.setState( {score: this.state.score + value} );
+    }
+
+    renderScore = () => {
         return <Score value={this.state.score} />;
     }
     
