@@ -5,23 +5,23 @@ class Timer extends Component {
         super();
         this.state = {
             time: {},
-            seconds: 10
+            seconds: 60
         };
         this.timer = 0;
     }
 
     secondsToTime = (secs) => {
-        let hours = Math.floor(secs / (60*60));
+        // let hours = Math.floor(secs / (60*60));
 
         let divisorForMinutes = secs % (60*60);
-        let minutes = Math.floor(divisorForMinutes / 60);
+        // let minutes = Math.floor(divisorForMinutes / 60);
 
         let divisorForSeconds = divisorForMinutes % 60;
         let seconds = Math.ceil(divisorForSeconds);
 
         let obj = {
-            "h": hours,
-            "m": minutes,
+            // "h": hours,
+            // "m": minutes,
             "s": seconds
         };
         return obj;
@@ -50,13 +50,14 @@ class Timer extends Component {
         //Check if at 0
         if (seconds == 0) {
             clearInterval(this.timer);
+            this.resetTimer();
         }
     }
 
     render() {
         return (
             <div>
-                m: {this.state.time.m} s: {this.state.time.s}
+                Time Left: {this.state.time.s}
             </div>
         );
     }
