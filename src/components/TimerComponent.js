@@ -5,7 +5,7 @@ class Timer extends Component {
         super();
         this.state = {
             time: {},
-            seconds: 5
+            seconds: 10
         };
         this.timer = 0;
     }
@@ -30,6 +30,7 @@ class Timer extends Component {
     componentDidMount = () => {
         let timeLeftVar = this.secondsToTime(this.state.seconds);
         this.setState( {time: timeLeftVar} );
+        this.startTimer();
     }
 
     startTimer = () => {
@@ -55,7 +56,6 @@ class Timer extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.startTimer}>Start</button>
                 m: {this.state.time.m} s: {this.state.time.s}
             </div>
         );
