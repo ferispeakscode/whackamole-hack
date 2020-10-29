@@ -32,11 +32,13 @@ class Field extends Component {
 
         //Generate random letters for field
         const values = [];
-        for (let i = 0; i < 25; i++) {
-            let selection = Math.floor(Math.random() * 25);
+        for (let i = 0; i < 24; i++) {
+            let selection = Math.floor(Math.random() * 24);
             console.log(selection);
             values.push(hiragana[selection]);
         }
+
+        values.push("あ");
 
         console.log(values);
 
