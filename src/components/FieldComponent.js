@@ -37,10 +37,20 @@ class Field extends Component {
             console.log(selection);
             values.push(hiragana[selection]);
         }
-
         values.push("あ");
 
         console.log(values);
+
+        //Randomize letters on field
+        let currentIndex = values.length, tempValue, randomIndex;
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            tempValue = values[currentIndex];
+            values[currentIndex] = values[randomIndex];
+            values[randomIndex] = tempValue;
+        }
 
         return (
             <div>
