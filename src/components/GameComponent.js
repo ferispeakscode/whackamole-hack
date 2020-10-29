@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Field from './FieldComponent';
 import Score from './ScoreComponent';
+import Timer from './TimerComponent';
 
 class Game extends Component {
     
@@ -28,6 +29,7 @@ class Game extends Component {
                     <button className="modes medium" onClick={this.runKatakana}>Play in Katakana</button>
                 </p>
 
+                <Timer />
                 {this.renderScore()}
                 <Field />
             </div>
