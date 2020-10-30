@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import Square from './SquareComponent';
 
-class Field extends Component {
-    constructor (props) {
-        super();
-        this.state = {
-            score: props.score
-        }
-    }
-    
+class Field extends Component { 
     renderSquare(i) {
-        return <Square value={i} score={this.props.score} />;
+        return <Square value={i} score={this.props.score} whack={this.props.wasWhacked} />;
     }
 
     render() {
@@ -41,12 +34,9 @@ class Field extends Component {
         const values = [];
         for (let i = 0; i < 24; i++) {
             let selection = Math.floor(Math.random() * 24);
-            console.log(selection);
             values.push(hiragana[selection]);
         }
         values.push("あ");
-
-        console.log(values);
 
         //Randomize letters on field
         let currentIndex = values.length, tempValue, randomIndex;
