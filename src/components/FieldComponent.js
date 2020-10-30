@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import Square from './SquareComponent';
 
 class Field extends Component {
+    constructor (props) {
+        super();
+        this.state = {
+            score: props.score
+        }
+    }
+    
     renderSquare(i) {
-        return <Square value={i} />;
+        return <Square value={i} score={this.props.score} />;
     }
 
     render() {

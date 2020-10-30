@@ -35,7 +35,7 @@ class Game extends Component {
 
                 <Timer />
                 {this.renderScore()}
-                <Field />
+                <Field score={this.state.score} />
             </div>
         );
     }

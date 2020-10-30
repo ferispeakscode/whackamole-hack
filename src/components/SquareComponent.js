@@ -6,7 +6,8 @@ class Square extends Component {
         super();
         this.state = {
             value: props.value,
-            mole: "あ"
+            mole: "あ",
+            score: props.score
         }
     }
 
@@ -20,6 +21,7 @@ class Square extends Component {
     }
 
     render() {
+        console.log("Score is " + this.state.score);
         return (
             <button className="square" onClick={this.checkMole}>
                 {this.props.value}
