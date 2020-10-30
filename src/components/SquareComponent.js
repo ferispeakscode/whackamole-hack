@@ -14,10 +14,15 @@ class Square extends Component {
     checkMole = () => {
         if ( this.state.value == this.state.mole) {
             console.log("You whacked the mole!");
+            this.updateScore();
         }
         else {
             console.log("Oops, try again!");
         }
+    }
+
+    updateScore = () => {
+        this.setState( {score: this.state.score + 10} );
     }
 
     render() {
