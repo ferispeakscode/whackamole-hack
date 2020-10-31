@@ -21,7 +21,7 @@ class Square extends Component {
 
     render() {
         return (
-            <button className="square" onClick={this.props.whack}>
+            <button className="square" onClick={this.props.whack} >
                 {this.props.value}
             </button>
         );

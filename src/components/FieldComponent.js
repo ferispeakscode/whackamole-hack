@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import Square from './SquareComponent';
 
 class Field extends Component { 
+    constructor() {
+        super();
+        this.state = {
+        }
+    }
+
     renderSquare(i) {
         return <Square value={i} score={this.props.score} whack={this.props.wasWhacked} />;
     }

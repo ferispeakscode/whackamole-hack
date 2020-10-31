@@ -10,11 +10,12 @@ class Game extends Component {
 
         this.state = {
             score: 0,
+            mole: "あ"
         };
     }
 
     handleWhack = () => {
-        this.setState( {score: this.state.score + 10} );
+            this.setState( {score: this.state.score + 10} );
     }
 
     renderScore = () => {
@@ -35,7 +36,7 @@ class Game extends Component {
 
                 <Timer />
                 {this.renderScore()}
-                <Field score={this.state.score} wasWhacked={this.handleWhack} />
+                <Field score={this.state.score} wasWhacked={this.handleWhack}  />
             </div>
         );
     }
