@@ -31,7 +31,6 @@ class Game extends Component {
                 </p>
 
                 <Timer />
-                {/* {this.renderScore()} */}
                 <Score value={this.state.score} />
                 <Field score={this.state.score} gameCallback={this.callbackFromField}  />
             </div>
