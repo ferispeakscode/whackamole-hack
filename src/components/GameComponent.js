@@ -14,14 +14,9 @@ class Game extends Component {
         };
     }
 
-    handleWhack = () => {
-            // this.setState( {score: this.state.score + 10} );
-            console.log("Value? " + this.props.value);
+    callbackFromField = (fieldData) => {
+        this.setState({score: fieldData});
     }
-
-    // renderScore = () => {
-    //     return <Score value={this.state.score} />;
-    // }
     
     render () {
         return(
@@ -38,7 +33,7 @@ class Game extends Component {
                 <Timer />
                 {/* {this.renderScore()} */}
                 <Score value={this.state.score} />
-                <Field score={this.state.score} wasWhacked={this.handleWhack}  />
+                <Field score={this.state.score} gameCallback={this.callbackFromField}  />
             </div>
         );
     }

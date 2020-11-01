@@ -12,27 +12,30 @@ class Field extends Component {
     }
 
     renderSquare(i) {
-        return <Square value={i} score={this.state.score} whack={this.wasWhacked} fieldCallback={this.callbackFunction} />;
+        return <Square value={i} fieldCallback={this.callbackFromSquare} />;
     }
 
-    callbackFunction = (squareData) => {
-        this.setState({value: squareData})
+    callbackFromSquare = (squareData) => {
+        this.setState({value: squareData});
+        this.updateScore();
     }
 
-    wasWhacked = () => {
-        console.log(this.state.value + " is the value");
-        if ( this.state.value == this.state.mole) {
-            this.setState({score: this.state.score + 15});
-            console.log("Yo! You whacked the mole!" + this.state.score);
+    updateScore = () => {
+        if (this.state.value == this.state.mole) {
+            this.setState({score: this.state.score + 5});
+            console.log("You whacked the mole!" + this.state.score);
         }
         else {
-            console.log("Oopsies, try again!");
+            console.log("Oops, try again!");
         }
+        this.sendScore();
+    }
+
+    sendScore = () => {
+        this.props.gameCallback(this.state.score);
     }
 
     render() {
-        console.log("Field " + this.state.score + " and " + this.state.value + "!");
-
         //Alphabet Bank
         const hiragana = ["あ", "い", "う", "え", "お", 
                         　"か", "き", "く", "け", "こ", 
