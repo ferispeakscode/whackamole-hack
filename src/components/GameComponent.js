@@ -5,8 +5,8 @@ import Timer from './TimerComponent';
 
 class Game extends Component {
     
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             score: 0,
@@ -15,12 +15,13 @@ class Game extends Component {
     }
 
     handleWhack = () => {
-            this.setState( {score: this.state.score + 10} );
+            // this.setState( {score: this.state.score + 10} );
+            console.log("Value? " + this.props.value);
     }
 
-    renderScore = () => {
-        return <Score value={this.state.score} />;
-    }
+    // renderScore = () => {
+    //     return <Score value={this.state.score} />;
+    // }
     
     render () {
         return(
@@ -35,7 +36,8 @@ class Game extends Component {
                 </p>
 
                 <Timer />
-                {this.renderScore()}
+                {/* {this.renderScore()} */}
+                <Score value={this.state.score} />
                 <Field score={this.state.score} wasWhacked={this.handleWhack}  />
             </div>
         );

@@ -2,17 +2,37 @@ import React, { Component } from 'react';
 import Square from './SquareComponent';
 
 class Field extends Component { 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
+            value: "",
+            score: props.score,
+            mole: "あ"
         }
     }
 
     renderSquare(i) {
-        return <Square value={i} score={this.props.score} whack={this.props.wasWhacked} />;
+        return <Square value={i} score={this.state.score} whack={this.wasWhacked} fieldCallback={this.callbackFunction} />;
+    }
+
+    callbackFunction = (squareData) => {
+        this.setState({value: squareData})
+    }
+
+    wasWhacked = () => {
+        console.log(this.state.value + " is the value");
+        if ( this.state.value == this.state.mole) {
+            this.setState({score: this.state.score + 15});
+            console.log("Yo! You whacked the mole!" + this.state.score);
+        }
+        else {
+            console.log("Oopsies, try again!");
+        }
     }
 
     render() {
+        console.log("Field " + this.state.score + " and " + this.state.value + "!");
+
         //Alphabet Bank
         const hiragana = ["あ", "い", "う", "え", "お", 
                         　"か", "き", "く", "け", "こ", 
