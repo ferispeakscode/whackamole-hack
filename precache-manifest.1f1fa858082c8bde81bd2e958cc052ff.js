@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea4cd353c863f85f6748f62942fa6eee",
+    "revision": "3857f86a364a6db5291174eed5f27d9e",
     "url": "/whackamole-hack/index.html"
   },
   {
-    "revision": "ef2306bad45fa2769cde",
+    "revision": "287aa85c430f69a9143c",
     "url": "/whackamole-hack/static/css/main.9d73aba6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/whackamole-hack/static/js/2.c563180c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ef2306bad45fa2769cde",
-    "url": "/whackamole-hack/static/js/main.ff8949ed.chunk.js"
+    "revision": "287aa85c430f69a9143c",
+    "url": "/whackamole-hack/static/js/main.13bf6973.chunk.js"
   },
   {
     "revision": "bbe90b6e31a46b9c3b11",
