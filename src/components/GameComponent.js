@@ -16,6 +16,19 @@ class Game extends Component {
 
     callbackFromField = (fieldData) => {
         this.setState({score: fieldData});
+        console.log("got new score" + this.state.score);
+    }
+
+    callbackFromField2 = (fieldData) => {
+        this.setState({value: fieldData});
+        console.log("got new value" + fieldData);
+        if (this.state.value == this.state.mole) {
+            this.setState({score: this.state.score + 10});
+            console.log("Aye, you whacked the mole!" + this.state.score);
+        }
+        else {
+            console.log("Aye, try again!");
+        }
     }
     
     render () {
@@ -32,7 +45,7 @@ class Game extends Component {
 
                 <Timer />
                 <Score value={this.state.score} />
-                <Field score={this.state.score} gameCallback={this.callbackFromField}  />
+                <Field score={this.state.score} gameCallback={this.callbackFromField} gameCallback2={this.callbackFromField2}  />
             </div>
         );
     }

@@ -12,12 +12,13 @@ class Field extends Component {
     }
 
     renderSquare(i) {
-        return <Square value={i} fieldCallback={this.callbackFromSquare} />;
+        return <Square value={i} fieldValueCallback={this.callbackFromSquare} />;
     }
 
     callbackFromSquare = (squareData) => {
         this.setState({value: squareData});
-        this.updateScore();
+        // this.updateScore();
+        this.sendScore();
     }
 
     updateScore = () => {
@@ -33,6 +34,7 @@ class Field extends Component {
 
     sendScore = () => {
         this.props.gameCallback(this.state.score);
+        this.props.gameCallback2(this.state.value);
     }
 
     render() {

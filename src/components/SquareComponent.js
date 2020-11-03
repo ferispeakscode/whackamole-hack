@@ -10,12 +10,12 @@ class Square extends Component {
     }
 
     sendData = () => {
-        this.props.fieldCallback(this.state.value);
+        this.props.fieldValueCallback(this.state.value);
     }
 
     render() {
         return (
-            <button className="square" onClick={this.sendData}  >
+            <button className="square" onClick={this.sendData} >
                 {this.state.value}
             </button>
         );
