@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import Field from './FieldComponent';
 import Score from './ScoreComponent';
 import Timer from './TimerComponent';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        score: state.score
+    };
+};
 
 class Game extends Component {
     
@@ -51,4 +58,4 @@ class Game extends Component {
     }
 }
 
-export default Game;
+export default connect(mapStateToProps)(Game);
