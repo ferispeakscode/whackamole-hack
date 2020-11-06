@@ -3,11 +3,16 @@ import Field from './FieldComponent';
 import Score from './ScoreComponent';
 import Timer from './TimerComponent';
 import { connect } from 'react-redux';
+import { postScore } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
         score: state.score
     };
+};
+
+const mapDispatchToProps = {
+    postScore: (score) => (postScore(score))
 };
 
 class Game extends Component {
@@ -58,4 +63,4 @@ class Game extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Game);
+export default connect(mapStateToProps, mapDispatchToProps)(Game);
